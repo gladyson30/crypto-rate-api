@@ -8,10 +8,10 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class CriptoConfiguracao {
 
-    @Value("${spring.coingecko.base-url}")
+    @Value("${coingecko.base-url}")
     private String baseUrl;
 
-    @Value("${spring.coingecko.api-key}")
+    @Value("${coingecko.api-key}")
     private String apiKey;
 
     @Bean

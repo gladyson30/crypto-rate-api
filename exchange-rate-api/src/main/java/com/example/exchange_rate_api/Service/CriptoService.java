@@ -2,6 +2,7 @@ package com.example.exchange_rate_api.Service;
 
 import com.example.exchange_rate_api.Model.Cripto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -15,7 +16,7 @@ public class CriptoService {
     private final WebClient client;
 
 
-
+    @Cacheable(value = "cripto", key = "#moeda")
     public Cripto buscarCotacao(String moeda){
         Map<String, Cripto> resposta = client.get()
                 .uri(uriBuilder -> uriBuilder
