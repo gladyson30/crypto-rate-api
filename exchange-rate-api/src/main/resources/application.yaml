@@ -14,4 +14,4 @@ spring:
 
 coingecko:
   base-url: https://api.coingecko.com/api/v3
-  api-key: meu-token
+  api-key: CG-8qfqU1Kg4YWNMYG2egVaQQYw
