@@ -115,3 +115,7 @@ curl http://localhost:8080/cripto/bitcoin
   "usd": 63033.0
 }
 ```
+
+👨‍💻 Autor
+
+Desenvolvido por GLADYSON GABRIEL BARBOSA DE FREITAS Linkedin: www.linkedin.com/in/gladyson-gabriel30
