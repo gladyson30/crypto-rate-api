@@ -1,5 +1,5 @@
 spring:
-  aplication:
+  application:
     name: Cripto-Rate-Api
 
   data:
@@ -11,7 +11,10 @@ spring:
   cache:
     type: redis
 
+  server:
+    port: ${PORT:8080}
+
 
 coingecko:
   base-url: https://api.coingecko.com/api/v3
-  api-key: meu-token
+  api-key:
