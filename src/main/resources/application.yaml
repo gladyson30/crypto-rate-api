@@ -7,7 +7,7 @@ spring:
 
 coingecko:
   base-url: https://api.coingecko.com/api/v3
-  api-key: meu-token
+  api-key: ${COINGECKO_API_KEY}
 
 server:
   port: ${PORT:8080}
