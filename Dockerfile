@@ -18,3 +18,10 @@ COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
+# CORREÇÃO 1: O Render injeta a porta dinamicamente, não podemos travar na 8080
+ENV PORT=8080
+EXPOSE ${PORT}
+
+# CORREÇÃO 2: Passar a variável de porta para o Java ler na inicialização
+ENTRYPOINT ["sh", "-c", "java -jar app.jar --server.port=${PORT}"]
