@@ -11,3 +11,9 @@ coingecko:
 
 server:
   port: ${PORT:8080}
+
+  logging:
+    level:
+      org.springframework.web: DEBUG
+      org.springdoc: DEBUG
+      com.fasterxml.jackson: DEBUG
